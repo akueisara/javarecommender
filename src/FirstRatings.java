@@ -24,7 +24,7 @@ public class FirstRatings {
 
 	public void testLoadMovies() {
 		String filename = "data/ratedmovies_short.csv";
-		//		String filename = "data/ratedmoviesfull.csv";
+//		String filename = "data/ratedmoviesfull.csv";
 		ArrayList<Movie> movieList = loadMovies(filename);
 		System.out.println("--------------------------------------------------------------");
 		System.out.println(filename.substring(5) + " has " + movieList.size() + " movies");
@@ -33,7 +33,7 @@ public class FirstRatings {
 		int time = 150;
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		for(Movie m: movieList) {
-			//			System.out.println(m);
+//			System.out.println(m);
 			if(m.getGenres().contains(genre)) 
 				genreCount++;
 			if(m.getMinutes() > time)
@@ -87,7 +87,7 @@ public class FirstRatings {
 
 	public void testLoadRaters() {
 		String filename = "data/ratings_short.csv";
-		//		String filename = "data/ratings.csv";
+//		String filename = "data/ratings.csv";
 		ArrayList<Rater> raterList = loadRaters(filename);
 		System.out.println("--------------------------------------------------------------");
 		System.out.println(filename.substring(5) + " has " + raterList.size() + " raters");
@@ -97,16 +97,16 @@ public class FirstRatings {
 		int raterCount = 0;
 		Set<String> set = new HashSet<String>();
 		for(Rater r: raterList) {
-			//			System.out.println("Rater ID " + r.getID() + " has " + r.numRatings() + " ratings");
+//			System.out.println("Rater ID " + r.getID() + " has " + r.numRatings() + " ratings");
 			ArrayList<String> ratingList = r.getItemsRated();
 			for(String s: ratingList) {
-				//				System.out.println("Movie ID " + s + " is rated as " + r.getRating(s));
+//				System.out.println("Movie ID " + s + " is rated as " + r.getRating(s));
 				if(!set.contains(s)) {
 					set.add(s);
 				}
 
 			}
-			//			System.out.println();
+//			System.out.println();
 
 			if(r.getID().equals(raterID))
 				System.out.println("Rater ID " + raterID + " has " + r.numRatings() + " ratings");
