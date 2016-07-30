@@ -21,5 +21,10 @@ public class MovieRunnerAverageTest {
 	public void printAverageRatingsTest() {
 		ma.printAverageRatings();
 	}
+	
+	@Test
+	public void getAverageRatingOneMovieTest(){
+		ma.getAverageRatingOneMovie();
+	}
 
 }

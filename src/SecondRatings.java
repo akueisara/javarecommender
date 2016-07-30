@@ -46,6 +46,33 @@ public class SecondRatings {
     	return average;
     }
     
+    public ArrayList<Rating> getAverageRatings(int minimalRaters) {
+    	ArrayList<Rating> ratings = new ArrayList<Rating>();
+    	for(Movie m: myMovies) {
+    		double averageRating = getAverageByID(m.getID(),minimalRaters);
+    		if(averageRating!=0){
+    			Rating r = new Rating(m.getID(), averageRating);
+    			ratings.add(r);
+    		}
+    	}
+    	return ratings;
+    }
     
+    public String getTitle(String id) {
+    	for(Movie m: myMovies) {
+    		if(m.getID().equals(id))
+    			return m.getTitle();
+    					
+    	}
+    	return "The movie ID " + id + " is not found.";
+    }
+    
+    public String getID(String title) {
+    	for(Movie m: myMovies) {
+    		if(m.getTitle().equals(title))
+    			return m.getID();
+    	}
+    	return "NO SUCH TITLE.";
+    }
 
 }
