@@ -1,8 +1,11 @@
 /**
  * Programming Exercise: Step One
  * 
+ * Programming Exercise: Step Three
+ * Assignment 1: Efficiency
+ * 
  * @author Kuei
- * @version July 24, 2016
+ * @version August 8, 2016
  */
 
 import org.junit.After;

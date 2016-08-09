@@ -5,8 +5,6 @@
  * @version July 29, 2016
  */
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class MovieRunnerAverage {

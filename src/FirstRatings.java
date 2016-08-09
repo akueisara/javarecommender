@@ -1,13 +1,16 @@
-import edu.duke.*;
-import java.util.*;
-import org.apache.commons.csv.*;
-
 /**
  * Programming Exercise: Step One
  * 
+ * Programming Exercise: Step Three
+ * Assignment 1: Efficiency
+ * 
  * @author Kuei
- * @version July 24, 2016
+ * @version August 8, 2016
  */
+
+import edu.duke.*;
+import java.util.*;
+import org.apache.commons.csv.*;
 
 public class FirstRatings {
 
@@ -63,7 +66,7 @@ public class FirstRatings {
 		int index = 0;
 		for(CSVRecord rec: parser) {
 			if(index == 0) {
-				Rater r = new Rater(rec.get("rater_id"));
+				Rater r = new EfficientRater(rec.get("rater_id"));
 				r.addRating(rec.get("movie_id"), Integer.parseInt(rec.get("rating")));
 				list.add(index, r);
 				index++;
@@ -72,7 +75,7 @@ public class FirstRatings {
 				list.get(index-1).addRating(rec.get("movie_id"), Integer.parseInt(rec.get("rating")));
 			}
 			else {
-				Rater r = new Rater(rec.get("rater_id"));
+				Rater r = new EfficientRater(rec.get("rater_id"));
 				r.addRating(rec.get("movie_id"), Integer.parseInt(rec.get("rating")));
 				list.add(index, r);
 				index++;
